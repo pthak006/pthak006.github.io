@@ -1,43 +1,51 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+  font-family: "Arial", sans-serif;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+  color: #333;
+  background-color: #f7f7f7;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+
+header {
+  text-align: center;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
+
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 2.5em;
+  margin-bottom: 0;
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  text-align: center;
+  margin-top: 40px;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+.social-icons li {
+  display: inline-block;
+  margin-right: 15px;
 }
 
-ul.posts li {
-    list-style: none;
+.social-icons li a {
+  font-size: 1.5em;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
