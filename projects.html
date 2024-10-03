@@ -3,38 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects - Partha Thakuria</title>
+    <title>Partha Thakuria - Projects</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- FontAwesome for icons -->
   </head>
   <body>
     <header>
       <h1>Projects</h1>
+      <div class="social-icons">
+        <a href="https://github.com/pthak006" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://x.com/partha_thakuria" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/parthathakuria/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
       <nav>
         <ul>
           <li><a href="/cv/Partha_Thakuria_CV.pdf">CV</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/projects.html" class="active">Projects</a></li>
           <li><a href="/blog.html">Blog</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <p>Coming soon...</p>
+      <section>
+        <h2>My Projects</h2>
+        <p>Coming soon...</p>
+      </section>
     </main>
 
     <footer>
       <ul class="social-icons">
         <li>
           <a
-            href="https://github.com/parthathakuria"
+            href="https://github.com/pthak006"
             target="_blank"
             class="fa fa-github"
           ></a>
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/partha-thakuria"
+            href="https://www.linkedin.com/in/parthathakuria/"
             target="_blank"
             class="fa fa-linkedin"
           ></a>
@@ -42,5 +61,25 @@
         <li><a href="mailto:pthak006@ucr.edu" class="fa fa-envelope"></a></li>
       </ul>
     </footer>
+
+    <script>
+      // JavaScript to highlight the active page
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
+
+        // Normalize root and index.html as the same
+        const normalizedPath =
+          currentPath === "/" || currentPath === "/index.html"
+            ? "/"
+            : currentPath;
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === normalizedPath) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -7,38 +7,102 @@ body {
   background-color: #f7f7f7;
 }
 
-header {
-  text-align: center;
+.header-container {
+  display: flex;
+  align-items: center; /* Align profile pic and text vertically */
+}
+
+.profile-pic {
+  flex: 0 0 auto; /* Fix the width to auto */
+  margin-right: 20px; /* Space between profile pic and text */
+}
+
+.profile-pic img {
+  border-radius: 8px;
+  width: 150px;
+  height: auto;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.intro-line span {
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  font-size: 1.8em;
+  color: #000; /* Make the icons black */
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #555; /* Slightly lighter on hover */
 }
 
 h1 {
   font-size: 2.5em;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 nav ul li {
-  display: inline;
   margin-right: 20px;
+}
+
+nav ul li a {
+  color: #3e87c9; /* Default color */
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+nav ul li a.active {
+  background-color: #3e87c9; /* Highlighted color */
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+main .about {
+  flex: 1;
+  padding-left: 20px;
 }
 
 footer {
   text-align: center;
   margin-top: 40px;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.social-icons li a {
-  font-size: 1.5em;
-  color: #333;
 }
 
 a {

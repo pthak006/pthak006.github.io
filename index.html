@@ -2,19 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Partha Thakuria - Homepage</title>
+    <title>Partha Thakuria - About</title>
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="icon" href="path/to/icon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- FontAwesome for icons -->
   </head>
   <body>
     <header>
-      <h1>I AM PARTHA THAKURIA</h1>
+      <div class="header-container">
+        <div class="profile-pic">
+          <img src="/images/profile_pic.png" alt="Profile Picture" />
+        </div>
+        <div class="right-section">
+          <div class="intro-line">
+            <span>I AM</span>
+            <div class="social-icons">
+              <a href="https://github.com/pthak006" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://x.com/partha_thakuria" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/parthathakuria/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <h1>PARTHA THAKURIA</h1>
+        </div>
+      </div>
+
       <nav>
         <ul>
           <li><a href="/cv/Partha_Thakuria_CV.pdf">CV</a></li>
-          <li><a href="/about.html">About</a></li>
+          <li><a href="/" class="active">About</a></li>
           <li><a href="/projects.html">Projects</a></li>
           <li><a href="/blog.html">Blog</a></li>
         </ul>
@@ -23,30 +50,47 @@
 
     <main>
       <section class="about">
-        <h2>About Me</h2>
-        <p>First-year PhD student at UC Riverside... (your introduction)</p>
-        <!-- We will expand this later -->
+        <p>
+          I am currently a first-year PhD student at UC Riverside. Before that,
+          I completed my bachelor's in Computer Science and Engineering at NIT
+          Silchar, India. I moved to UC Riverside for my master’s in 2022,
+          specializing in data science, machine learning, and artificial
+          intelligence. I completed my master’s project under the supervision of
+          Professor Gregory Ver Steeg, and I continue my research under his
+          guidance.
+        </p>
+        <p>
+          In addition to my research, I have professional experience as a
+          software engineer in the information technology industry, where I
+          worked on different tech stacks. I believe that to be a good
+          researcher in computer science, one must first be a good computer
+          engineer, solving real-world problems effectively.
+        </p>
+        <p>
+          I also enjoy building software in my spare time. One of my key side
+          projects is collaborating with Professor Andy Ridgewell to modernize
+          his numerical Fortran-based model, Genie.
+        </p>
       </section>
     </main>
+    <script>
+      // JavaScript to highlight the active page
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname;
 
-    <footer>
-      <ul class="social-icons">
-        <li>
-          <a
-            href="https://github.com/parthathakuria"
-            target="_blank"
-            class="fa fa-github"
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/partha-thakuria"
-            target="_blank"
-            class="fa fa-linkedin"
-          ></a>
-        </li>
-        <li><a href="mailto:pthak006@ucr.edu" class="fa fa-envelope"></a></li>
-      </ul>
-    </footer>
+        // Normalize root and index.html as the same
+        const normalizedPath =
+          currentPath === "/" || currentPath === "/index.html"
+            ? "/"
+            : currentPath;
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === normalizedPath) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
